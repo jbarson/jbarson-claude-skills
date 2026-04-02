@@ -1,0 +1,71 @@
+# Central Repo List — Skill Ecosystem Discovery Aid
+#
+# This file lists known repositories that contain Claude Code skills, agents,
+# or commands. It is a DISCOVERY AID, not a mandate — each person's local
+# snoop-sources.yaml is their own source of truth.
+#
+# How this works:
+#   1. Anyone can add their repo by opening a PR to this file
+#   2. Agents with /snoop --fetch-central read this list to discover new repos
+#   3. Each user decides which repos to register locally
+#   4. When 3+ repos share similar skills, agents flag centralization candidates
+#
+# Repo types:
+#   - hub:         Centralized org-wide skill repo (thanx-cortex)
+#   - marketplace: Claude Code marketplace with .claude-plugin/ structure
+#   - personal:    Personal skill repo with flat skills/ directory
+#   - claude-dir:  A .claude directory inside a larger repo
+#   - agents-dir:  An .agents directory following the Agent Skills standard
+#
+# Fields:
+#   name:          Human-readable label
+#   type:          One of: hub, marketplace, personal, claude-dir, agents-dir
+#   remote:        Git remote URL
+#   owner:         GitHub username or org
+#   description:   What this repo contains
+#   skill_paths:   Where to look for skills (relative to repo root)
+#   added_at:      ISO date when this repo was registered
+#   added_by:      Who added it
+
+repos:
+  - name: "thanx-cortex"
+    type: hub
+    remote: "git@github.com:thanx/thanx-cortex.git"
+    owner: "thanx"
+    description: "Thanx engineering toolkit — centralized, org-wide skills and agents"
+    skill_paths:
+      - "plugins/thanx/skills/"
+      - "plugins/thanx/agents/"
+    added_at: "2026-03-31"
+    added_by: "kosmin"
+
+  - name: "kosmin-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/kosmin-claude-skills.git"
+    owner: "kosmin"
+    description: "Kosmin's personal skill marketplace — SOLID principles, coding conventions, skill discovery and distribution"
+    skill_paths:
+      - "skills/"
+      - "agents/"
+    added_at: "2026-03-31"
+    added_by: "kosmin"
+
+  - name: "anutron-claude-skills"
+    type: personal
+    remote: "git@github.com:anutron/claude-skills.git"
+    owner: "anutron"
+    description: "Aaron's skill repo — bugbash, fixit, debug, dev, PR workflows, and more"
+    skill_paths:
+      - "skills/"
+    added_at: "2026-03-31"
+    added_by: "kosmin"
+
+  - name: "drn-dots"
+    type: claude-dir
+    remote: "git@github.com:drn/dots.git"
+    owner: "drn"
+    description: "Darren's dotfiles — includes Claude skills that originated many patterns in this ecosystem"
+    skill_paths:
+      - ".claude/skills/"
+    added_at: "2026-03-31"
+    added_by: "kosmin"

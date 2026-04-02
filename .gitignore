@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor state
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Claude Code local state (not the symlinked config)
+.claude/
