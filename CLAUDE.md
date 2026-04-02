@@ -8,13 +8,24 @@ Personal AI workflow repo. Contains global Claude Code configuration, personal s
 jbarson-claude-skills/
 ├── CLAUDE.md                          # This file (repo-level instructions)
 ├── .claude-plugin/
-│   └── marketplace.json               # Plugin marketplace manifest
-├── global/
-│   ├── CLAUDE.md                      # Global instructions -> symlinked to ~/.claude/CLAUDE.md
-│   ├── settings.json                  # Permission defaults -> symlinked to ~/.claude/settings.json
-│   └── PERMISSIONS.md                 # Explains the allow/deny model
+│   └── marketplace.json               # Marketplace manifest (owner + plugins array)
+├── providers/
+│   └── claude/
+│       ├── .claude-plugin/
+│       │   └── plugin.json            # Plugin manifest
+│       ├── commands/                   # Slash commands (one .md per command)
+│       │   ├── browse-skills.md
+│       │   ├── disk-cleanup.md
+│       │   ├── handoff.md
+│       │   ├── improve.md
+│       │   ├── knowledge.md
+│       │   ├── register-repo.md
+│       │   ├── sync-upstream.md
+│       │   └── write-skill.md
+│       ├── skills/                     # Agent skills (if any)
+│       └── hooks/                      # Hook definitions (if any)
 ├── agents/
-│   └── skills/                        # Personal skills -> symlinked to ~/.claude/skills/
+│   └── skills/                        # Standalone skills -> symlinked to ~/.claude/skills/
 │       ├── browse-skills/SKILL.md
 │       ├── disk-cleanup/SKILL.md
 │       ├── handoff/SKILL.md
@@ -23,6 +34,10 @@ jbarson-claude-skills/
 │       ├── register-repo/SKILL.md
 │       ├── sync-upstream/SKILL.md
 │       └── write-skill/SKILL.md
+├── global/
+│   ├── CLAUDE.md                      # Global instructions -> symlinked to ~/.claude/CLAUDE.md
+│   ├── settings.json                  # Permission defaults -> symlinked to ~/.claude/settings.json
+│   └── PERMISSIONS.md                 # Explains the allow/deny model
 ├── context/
 │   ├── voice-profile.md              # Generated voice/writing profile
 │   └── knowledge/                    # Personal knowledge base
@@ -32,6 +47,10 @@ jbarson-claude-skills/
 │   └── README.md                     # Ecosystem docs
 └── .gitignore
 ```
+
+Skills exist in two places for dual-mode access:
+- `providers/claude/commands/` — plugin marketplace format (installed via marketplace)
+- `agents/skills/` — symlink format (installed via setup.sh)
 
 ## Symlink Setup
 

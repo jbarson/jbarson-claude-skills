@@ -1,52 +1,33 @@
 {
   "name": "jbarson-claude-skills",
-  "version": "1.0.0",
-  "description": "Jon Barson's personal skill marketplace — self-improving AI workflow infrastructure with learning loops, knowledge capture, and skill authoring",
-  "author": "jbarson",
-  "repository": "git@github.com:jbarson/jbarson-claude-skills.git",
-  "skill_paths": [
-    "agents/skills/"
-  ],
-  "skills": [
+  "owner": {
+    "name": "Jon Barson",
+    "email": "jbarson@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Personal Claude Code skill marketplace — self-improving AI workflow infrastructure with learning loops, knowledge capture, and skill authoring",
+    "version": "1.0.0",
+    "pluginRoot": "./providers"
+  },
+  "plugins": [
     {
-      "name": "browse-skills",
-      "path": "agents/skills/browse-skills/SKILL.md",
-      "description": "Discover and adopt skills from the central skill ecosystem"
-    },
-    {
-      "name": "disk-cleanup",
-      "path": "agents/skills/disk-cleanup/SKILL.md",
-      "description": "Scan local disk for large storage consumers and identify cleanup opportunities"
-    },
-    {
-      "name": "handoff",
-      "path": "agents/skills/handoff/SKILL.md",
-      "description": "Generate structured context prompts for transferring work between agent sessions"
-    },
-    {
-      "name": "improve",
-      "path": "agents/skills/improve/SKILL.md",
-      "description": "End-of-session learning loop — extract friction, improve skills, capture knowledge"
-    },
-    {
-      "name": "knowledge",
-      "path": "agents/skills/knowledge/SKILL.md",
-      "description": "Initialize or update a project knowledge base for cross-session knowledge capture"
-    },
-    {
-      "name": "register-repo",
-      "path": "agents/skills/register-repo/SKILL.md",
-      "description": "Register your skill repository in the central ecosystem repo-list"
-    },
-    {
-      "name": "sync-upstream",
-      "path": "agents/skills/sync-upstream/SKILL.md",
-      "description": "Check upstream for improvements and incorporate them into your fork"
-    },
-    {
-      "name": "write-skill",
-      "path": "agents/skills/write-skill/SKILL.md",
-      "description": "Create or improve Claude Code skills with best practices and validation"
+      "name": "jbarson-skills",
+      "source": "./providers/claude",
+      "description": "Personal skill toolkit — session improvement, knowledge capture, context handoff, skill authoring, disk cleanup, and ecosystem discovery",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jon Barson"
+      },
+      "keywords": [
+        "improve",
+        "handoff",
+        "knowledge",
+        "write-skill",
+        "disk-cleanup",
+        "browse-skills",
+        "sync-upstream",
+        "register-repo"
+      ]
     }
   ]
 }
