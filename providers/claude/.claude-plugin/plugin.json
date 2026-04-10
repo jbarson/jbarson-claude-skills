@@ -1,7 +1,7 @@
 {
   "name": "jbarson-skills",
   "version": "1.0.0",
-  "description": "Personal skill toolkit — session improvement, knowledge capture, context handoff, skill authoring, disk cleanup, and ecosystem discovery",
+  "description": "Personal skill toolkit — session improvement, knowledge capture, context handoff, skill authoring, disk cleanup, ecosystem discovery, and production safety",
   "author": {
     "name": "Jon Barson"
   },
@@ -13,7 +13,10 @@
     "disk-cleanup",
     "browse-skills",
     "sync-upstream",
-    "register-repo"
+    "register-repo",
+    "confidence-check",
+    "production-checklist",
+    "production-safety-check"
   ],
   "homepage": "https://github.com/jbarson/jbarson-claude-skills",
   "license": "MIT"
